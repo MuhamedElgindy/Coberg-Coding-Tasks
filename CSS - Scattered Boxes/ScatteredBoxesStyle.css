@@ -1,0 +1,19 @@
+.MainContainer{
+  background-color:rgb(255,94,0);
+  display: flex;
+  justify-content: space-around;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.SecondaryContainer{
+  background-color:yellow;
+  /* width: 20%; */
+  padding: 10px;
+}
+.HeaderLine{
+  margin-bottom: 5px;
+  width: 100%;
+  background-color: black;
+  height: 6px;
+}

@@ -1,0 +1,41 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-23-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-card title="Magic Number Guessing Game">
+            <div class="slds-p-horizontal_small">
+                <p>{message}</p>
+                <lightning-input 
+                    label="Enter your guess" 
+                    type="number" 
+                    value={guess} 
+                    onchange={handleGuessChange}>
+                </lightning-input>
+                <lightning-button 
+                    class="slds-m-top_small" 
+                    label="Submit Guess" 
+                    onclick={handleGuessSubmit}>
+                </lightning-button>
+            </div>
+            <div class="slds-p-horizontal_small slds-m-top_small">
+                <lightning-button 
+                    variant="destructive" 
+                    label="Restart Game" 
+                    onclick={handleRestart}>
+                </lightning-button>
+            </div>
+            <template if:true={guessList.length}>
+                <lightning-datatable
+                    data={guessList}
+                    columns={columns}
+                    key-field="id"
+                ></lightning-datatable>
+            </template>
+        </lightning-card>
+    </div>
+</template>
